@@ -1,8 +1,23 @@
 #pragma once
 
+#include <QWidget>
+
+#include "ui_mainwidget.h"
+
 namespace pqe {
 
 class GuiWrapper {
+public:
+  Ui::mainForm _mainForm;
+
+  GuiWrapper();
+  ~GuiWrapper();
+
+  void constructUi();
+  void show();
+
+private:
+  QWidget *_widget = nullptr;
 };
 
 } // namespace pqe

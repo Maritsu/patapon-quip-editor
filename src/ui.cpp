@@ -2,6 +2,20 @@
 
 namespace pqe {
 
+GuiWrapper::GuiWrapper() {}
+
+GuiWrapper::~GuiWrapper() { delete _widget; }
+
+void GuiWrapper::constructUi() {
+  _widget = new QWidget();
+  _mainForm.setupUi(_widget);
+}
+
+void GuiWrapper::show() {
+  assert(_widget != nullptr);
+  _widget->show();
+}
+
 } // namespace pqe
 
 // p3qe
