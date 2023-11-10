@@ -2,6 +2,10 @@
 
 namespace pqe {
 
+App::App() {}
+
+App::~App() {}
+
 } // namespace pqe
 
 // p3qe

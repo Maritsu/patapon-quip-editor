@@ -1,8 +1,18 @@
 #pragma once
 
+#include <QWidget>
+#include <QtGui>
+
+#include "ui.hpp"
+
 namespace pqe {
 
 class App {
+public:
+  GuiWrapper _gui;
+
+  App();
+  ~App();
 };
 
 } // namespace pqe
