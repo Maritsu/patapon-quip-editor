@@ -24,20 +24,38 @@
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QPushButton" name="loadBtn">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="text">
            <string>Load</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="saveBtn">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Save</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="saveBkBtn">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Save with backup</string>
           </property>
@@ -112,6 +130,9 @@
           <property name="text">
            <string>4 quips in quest</string>
           </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
          </widget>
         </item>
         <item>
@@ -119,12 +140,18 @@
           <property name="text">
            <string>9 quips in quest</string>
           </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
          </widget>
         </item>
         <item>
          <widget class="QRadioButton" name="mode24RBtn">
           <property name="text">
            <string>24 quips in quest</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -175,7 +202,7 @@
    <item>
     <widget class="QTabWidget" name="quipTabs">
      <property name="currentIndex">
-      <number>3</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="chat4Tab">
       <attribute name="title">
@@ -183,16 +210,32 @@
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
-        <widget class="QLineEdit" name="t4q1Line"/>
+        <widget class="QLineEdit" name="t4q1Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="t4q3Line"/>
+        <widget class="QLineEdit" name="t4q3Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLineEdit" name="t4q2Line"/>
+        <widget class="QLineEdit" name="t4q2Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="t4q4Line"/>
+        <widget class="QLineEdit" name="t4q4Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -202,31 +245,67 @@
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="5">
-        <widget class="QLineEdit" name="t9q7Line"/>
+        <widget class="QLineEdit" name="t9q7Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="3">
-        <widget class="QLineEdit" name="t9q5Line"/>
+        <widget class="QLineEdit" name="t9q5Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="5">
-        <widget class="QLineEdit" name="t9q8Line"/>
+        <widget class="QLineEdit" name="t9q8Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QLineEdit" name="t9q2Line"/>
+        <widget class="QLineEdit" name="t9q2Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="0" column="2">
-        <widget class="QLineEdit" name="t9q1Line"/>
+        <widget class="QLineEdit" name="t9q1Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="0" column="3">
-        <widget class="QLineEdit" name="t9q4Line"/>
+        <widget class="QLineEdit" name="t9q4Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="2" column="3">
-        <widget class="QLineEdit" name="t9q6Line"/>
+        <widget class="QLineEdit" name="t9q6Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="2" column="5">
-        <widget class="QLineEdit" name="t9q9Line"/>
+        <widget class="QLineEdit" name="t9q9Line">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="2" column="2">
-        <widget class="QLineEdit" name="t9q3Line"/>
+        <widget class="QLineEdit" name="t9q3Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -236,76 +315,168 @@
       </attribute>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
-        <widget class="QLineEdit" name="t24q1Line"/>
+        <widget class="QLineEdit" name="t24q1Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="t24q7Line"/>
+        <widget class="QLineEdit" name="t24q7Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="0" column="3">
-        <widget class="QLineEdit" name="t24q13Line"/>
+        <widget class="QLineEdit" name="t24q13Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="0" column="4">
-        <widget class="QLineEdit" name="t24q19Line"/>
+        <widget class="QLineEdit" name="t24q19Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLineEdit" name="t24q2Line"/>
+        <widget class="QLineEdit" name="t24q2Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="t24q8Line"/>
+        <widget class="QLineEdit" name="t24q8Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="2" colspan="2">
-        <widget class="QLineEdit" name="t24q14Line"/>
+        <widget class="QLineEdit" name="t24q14Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="4">
-        <widget class="QLineEdit" name="t24q20Line"/>
+        <widget class="QLineEdit" name="t24q20Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QLineEdit" name="t24q3Line"/>
+        <widget class="QLineEdit" name="t24q3Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="t24q9Line"/>
+        <widget class="QLineEdit" name="t24q9Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="2" column="2" colspan="2">
         <widget class="QLineEdit" name="t24q15Line"/>
        </item>
        <item row="2" column="4">
-        <widget class="QLineEdit" name="t24q21Line"/>
+        <widget class="QLineEdit" name="t24q21Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QLineEdit" name="t24q4Line"/>
+        <widget class="QLineEdit" name="t24q4Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="t24q10Line"/>
+        <widget class="QLineEdit" name="t24q10Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="3" column="3">
-        <widget class="QLineEdit" name="t24q16Line"/>
+        <widget class="QLineEdit" name="t24q16Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="3" column="4">
-        <widget class="QLineEdit" name="t24q22Line"/>
+        <widget class="QLineEdit" name="t24q22Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QLineEdit" name="t24q5Line"/>
+        <widget class="QLineEdit" name="t24q5Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="t24q11Line"/>
+        <widget class="QLineEdit" name="t24q11Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="4" column="3">
-        <widget class="QLineEdit" name="t24q17Line"/>
+        <widget class="QLineEdit" name="t24q17Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="4" column="4">
-        <widget class="QLineEdit" name="t24q23Line"/>
+        <widget class="QLineEdit" name="t24q23Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QLineEdit" name="t24q6Line"/>
+        <widget class="QLineEdit" name="t24q6Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="5" column="1" colspan="2">
-        <widget class="QLineEdit" name="t24q12Line"/>
+        <widget class="QLineEdit" name="t24q12Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="5" column="3">
-        <widget class="QLineEdit" name="t24q18Line"/>
+        <widget class="QLineEdit" name="t24q18Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="5" column="4">
-        <widget class="QLineEdit" name="t24q24Line"/>
+        <widget class="QLineEdit" name="t24q24Line">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -322,7 +493,11 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="taqdeathLine"/>
+        <widget class="QLineEdit" name="taqdeathLine">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="taqFeverLabel">
@@ -332,7 +507,11 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="taqFeverLine"/>
+        <widget class="QLineEdit" name="taqFeverLine">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="taqReviveLabel">
@@ -342,7 +521,11 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="taqReviveLine"/>
+        <widget class="QLineEdit" name="taqReviveLine">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="taqSoonLabel">
@@ -352,7 +535,11 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="taqSoonLine"/>
+        <widget class="QLineEdit" name="taqSoonLine">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="taqSummonLabel">
@@ -362,7 +549,11 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="taqSummonLine"/>
+        <widget class="QLineEdit" name="taqSummonLine">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="taqSReviveLabel">
@@ -372,7 +563,11 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QLineEdit" name="taqSReviveLine"/>
+        <widget class="QLineEdit" name="taqSReviveLine">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="6" column="0">
         <widget class="QLabel" name="taqIdleLabel">
@@ -382,7 +577,11 @@
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QLineEdit" name="taqIdleLine"/>
+        <widget class="QLineEdit" name="taqIdleLine">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
