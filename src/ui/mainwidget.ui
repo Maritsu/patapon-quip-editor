@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainForm</class>
+ <widget class="QWidget" name="mainForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>893</width>
+    <height>551</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="topLayout">
+     <item>
+      <widget class="QGroupBox" name="fileGroup">
+       <property name="title">
+        <string>File</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="loadBtn">
+          <property name="text">
+           <string>Load</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="saveBtn">
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="saveBkBtn">
+          <property name="text">
+           <string>Save with backup</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="cryptGroup">
+       <property name="title">
+        <string>Encryption</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QCheckBox" name="pspCheck">
+          <property name="text">
+           <string>(not implemented)</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="p3Check">
+          <property name="text">
+           <string>(not implemented)</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pspeCheck">
+          <property name="text">
+           <string>(not implemented)</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="p3eCheck">
+          <property name="text">
+           <string>(not implemented)</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="modeGroup">
+       <property name="title">
+        <string>Quip mode</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QRadioButton" name="mode4RBtn">
+          <property name="text">
+           <string>4 quips in quest</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="mode9RBtn">
+          <property name="text">
+           <string>9 quips in quest</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="mode24RBtn">
+          <property name="text">
+           <string>24 quips in quest</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>Info</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QPushButton" name="aboutBtn">
+          <property name="text">
+           <string>About</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="cheatsheetBtn">
+          <property name="text">
+           <string>Modifiers</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="credLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>p3qe (ver) by pear</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="quipTabs">
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <widget class="QWidget" name="chat4Tab">
+      <attribute name="title">
+       <string>4 Quips</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLineEdit" name="t4q1Line"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="t4q3Line"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="t4q2Line"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="t4q4Line"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="chat9Tab">
+      <attribute name="title">
+       <string>9 Quips</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="5">
+        <widget class="QLineEdit" name="t9q7Line"/>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLineEdit" name="t9q5Line"/>
+       </item>
+       <item row="1" column="5">
+        <widget class="QLineEdit" name="t9q8Line"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="t9q2Line"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLineEdit" name="t9q1Line"/>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLineEdit" name="t9q4Line"/>
+       </item>
+       <item row="2" column="3">
+        <widget class="QLineEdit" name="t9q6Line"/>
+       </item>
+       <item row="2" column="5">
+        <widget class="QLineEdit" name="t9q9Line"/>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLineEdit" name="t9q3Line"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="chat24Tab">
+      <attribute name="title">
+       <string>24 Quips</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLineEdit" name="t24q1Line"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="t24q7Line"/>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLineEdit" name="t24q13Line"/>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLineEdit" name="t24q19Line"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="t24q2Line"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="t24q8Line"/>
+       </item>
+       <item row="1" column="2" colspan="2">
+        <widget class="QLineEdit" name="t24q14Line"/>
+       </item>
+       <item row="1" column="4">
+        <widget class="QLineEdit" name="t24q20Line"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLineEdit" name="t24q3Line"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="t24q9Line"/>
+       </item>
+       <item row="2" column="2" colspan="2">
+        <widget class="QLineEdit" name="t24q15Line"/>
+       </item>
+       <item row="2" column="4">
+        <widget class="QLineEdit" name="t24q21Line"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="t24q4Line"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="t24q10Line"/>
+       </item>
+       <item row="3" column="3">
+        <widget class="QLineEdit" name="t24q16Line"/>
+       </item>
+       <item row="3" column="4">
+        <widget class="QLineEdit" name="t24q22Line"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLineEdit" name="t24q5Line"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="t24q11Line"/>
+       </item>
+       <item row="4" column="3">
+        <widget class="QLineEdit" name="t24q17Line"/>
+       </item>
+       <item row="4" column="4">
+        <widget class="QLineEdit" name="t24q23Line"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLineEdit" name="t24q6Line"/>
+       </item>
+       <item row="5" column="1" colspan="2">
+        <widget class="QLineEdit" name="t24q12Line"/>
+       </item>
+       <item row="5" column="3">
+        <widget class="QLineEdit" name="t24q18Line"/>
+       </item>
+       <item row="5" column="4">
+        <widget class="QLineEdit" name="t24q24Line"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="autochatTab">
+      <attribute name="title">
+       <string>Autochat</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <widget class="QLabel" name="taqdeathLabel">
+         <property name="text">
+          <string>Upon death</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="taqdeathLine"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="taqFeverLabel">
+         <property name="text">
+          <string>When Fever is lost</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="taqFeverLine"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="taqReviveLabel">
+         <property name="text">
+          <string>When revived</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="taqReviveLine"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="taqSoonLabel">
+         <property name="text">
+          <string>When almost self-revived</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="taqSoonLine"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="taqSummonLabel">
+         <property name="text">
+          <string>When Summon is activated</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="taqSummonLine"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="taqSReviveLabel">
+         <property name="text">
+          <string>When revived by Summon</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="taqSReviveLine"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="taqIdleLabel">
+         <property name="text">
+          <string>When Idle</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="taqIdleLine"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="statusLabel">
+     <property name="text">
+      <string>(no translation needed)</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

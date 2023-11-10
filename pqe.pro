@@ -22,5 +22,8 @@ CONFIG += debug qt c++20
 # Input
 SOURCES += src/main.cpp
 
+# Forms
+FORMS += src/ui/mainwidget.ui
+
 # Output
 DESTDIR = build
