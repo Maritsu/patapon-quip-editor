@@ -5,6 +5,7 @@
 TEMPLATE = app
 TARGET = pqe
 INCLUDEPATH += .
+INCLUDEPATH += libP3Hash
 
 # You can make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -21,8 +22,8 @@ CONFIG += debug qt c++20
 
 # Input
 SOURCES += src/main.cpp
-SOURCES += src/app.cpp src/ui.cpp
-HEADERS += src/app.hpp src/ui.hpp
+SOURCES += src/app.cpp src/ui.cpp src/files.cpp
+HEADERS += src/app.hpp src/ui.hpp src/files.hpp
 
 # Forms
 FORMS += src/ui/mainwidget.ui
