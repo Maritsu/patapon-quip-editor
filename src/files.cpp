@@ -16,16 +16,15 @@ QByteArray loadData(const QString &path, bool pspEncrypted, bool p3Encrypted) {
   QFile file(path);
   if (!file.open(QFile::ReadOnly)) {
     throw std::runtime_error("Could not read input file!");
-  } else {
-    QByteArray data = file.readAll();
-    if (pspEncrypted) {
-    } // not implemented
-    if (p3Encrypted) {
-      data = decrypt(data);
-    }
-    file.close();
-    return data;
   }
+  QByteArray data = file.readAll();
+  if (pspEncrypted) {
+  } // not implemented
+  if (p3Encrypted) {
+    data = decrypt(data);
+  }
+  file.close();
+  return data;
 }
 
 bool saveData(QFile *file, const QByteArray &newData, bool backup,
