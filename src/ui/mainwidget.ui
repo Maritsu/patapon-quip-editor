@@ -83,10 +83,10 @@
         <item>
          <widget class="QCheckBox" name="p3Check">
           <property name="text">
-           <string>(not implemented)</string>
+           <string>P3 encrypted</string>
           </property>
           <property name="checkable">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -106,10 +106,10 @@
         <item>
          <widget class="QCheckBox" name="p3eCheck">
           <property name="text">
-           <string>(not implemented)</string>
+           <string>P3 re-encrypt</string>
           </property>
           <property name="checkable">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <property name="checked">
            <bool>false</bool>
@@ -202,7 +202,7 @@
    <item>
     <widget class="QTabWidget" name="quipTabs">
      <property name="currentIndex">
-      <number>2</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="chat4Tab">
       <attribute name="title">
