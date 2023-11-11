@@ -14,7 +14,8 @@ QByteArray loadData(const QString &path, bool pspEncrypted, bool p3Encrypted) {
     if (pspEncrypted) {
     } // not implemented
     if (p3Encrypted) {
-    } // not implemented
+      data = decrypt(data);
+    }
     file.close();
     return data;
   }
@@ -30,7 +31,8 @@ bool saveData(QFile *file, const QByteArray &newData, bool backup,
   }
   QByteArray data = newData;
   if (p3Encrypt) {
-  } // not implemented
+    data = encrypt(data);
+  }
   if (pspEncrypt) {
   } // not implemented
   if (qint64 bytesWritten;
@@ -50,9 +52,17 @@ bool saveData(QFile *file, const QByteArray &newData, bool backup,
 }
 
 QByteArray decrypt(const QByteArray &data) {
+  std::vector<uint32_t> dataVec(data.constBegin(), data.constEnd());
+  dataVec = decryptBlock(dataVec);
+  return QByteArray(reinterpret_cast<const char *>(dataVec.data()),
+                    dataVec.size());
 }
 
 QByteArray encrypt(const QByteArray &data) {
+  std::vector<uint32_t> dataVec(data.constBegin(), data.constEnd());
+  dataVec = encryptBlock(dataVec);
+  return QByteArray(reinterpret_cast<const char *>(dataVec.data()),
+                    dataVec.size());
 }
 
 } // namespace pqe
