@@ -1,0 +1,3 @@
+[submodule "libP3Hash"]
+	path = libP3Hash
+	url = https://github.com/Maritsu/libP3Hash.git
