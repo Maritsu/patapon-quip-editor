@@ -2,6 +2,22 @@
 
 namespace pqe {
 
+QString execPathDialog(QWidget *parent) {
+}
+
+QByteArray loadData(const QString &path, bool pspEncrypted, bool p3Encrypted) {
+}
+
+bool saveData(QFile *file, const QByteArray &newData, bool backup,
+              bool pspEncrypt, bool p3Encrypt) {
+}
+
+QByteArray decrypt(const QByteArray &data) {
+}
+
+QByteArray encrypt(const QByteArray &data) {
+}
+
 } // namespace pqe
 
 // p3qe
