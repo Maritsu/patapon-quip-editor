@@ -1,8 +1,15 @@
+#include <QFileDialog>
+#include <QSaveFile>
+#include <stdexcept>
+
 #include "files.hpp"
+#include "libP3Hash.cpp"
 
 namespace pqe {
 
 QString execPathDialog(QWidget *parent) {
+  return QFileDialog::getOpenFileName(parent, "Select file", "/",
+                                      "Patapon 3 savedata (*.BIN)");
 }
 
 QByteArray loadData(const QString &path, bool pspEncrypted, bool p3Encrypted) {
