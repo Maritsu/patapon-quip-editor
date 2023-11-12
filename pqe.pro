@@ -22,8 +22,9 @@ CONFIG += debug qt c++20
 
 # Input
 SOURCES += src/main.cpp
-SOURCES += src/app.cpp src/ui.cpp src/files.cpp
-HEADERS += src/app.hpp src/ui.hpp src/files.hpp
+SOURCES += src/ui.cpp src/files.cpp
+HEADERS += src/ui.hpp src/files.hpp
+HEADERS += src/constants.hpp
 
 # Forms
 FORMS += src/ui/mainwidget.ui
