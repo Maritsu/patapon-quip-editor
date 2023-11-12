@@ -6,18 +6,45 @@
 
 namespace pqe {
 
-class GuiWrapper {
+class GuiWrapperApp;
+
+namespace forms {
+
+class MainForm : public QWidget {
+  Q_OBJECT
+
 public:
-  Ui::mainForm _mainForm;
+  explicit MainForm(QWidget *parent, GuiWrapperApp &parentApp);
 
-  GuiWrapper();
-  ~GuiWrapper();
+private slots:
+  void _loadData();
+  void _saveData();
+  void _saveDataWithBackup();
 
-  void constructUi();
+private:
+  Ui::mainForm _ui;
+  GuiWrapperApp &_parentApp;
+
+  void enableStuff();
+  void fillData();
+};
+
+} // namespace forms
+
+class GuiWrapperApp {
+public:
+  GuiWrapperApp();
+  ~GuiWrapperApp();
+
   void show();
+
+  friend class forms::MainForm;
 
 private:
   QWidget *_widget = nullptr;
+  forms::MainForm *_mainForm = nullptr;
+
+  QByteArray _fileData;
 };
 
 } // namespace pqe

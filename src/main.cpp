@@ -1,12 +1,15 @@
 #include <QApplication>
-#include <QLabel>
 #include <QtGui>
 
+#include "ui.hpp"
+
 int main(int argc, char *argv[]) {
-  QApplication app(argc, argv);
-  QLabel label("Hello, world!");
-  label.show();
-  return app.exec();
+  QApplication qapp(argc, argv);
+
+  pqe::GuiWrapperApp gui;
+  gui.show();
+
+  return qapp.exec();
 }
 
 // p3qe

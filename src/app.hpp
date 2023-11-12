@@ -3,13 +3,15 @@
 #include <QWidget>
 #include <QtGui>
 
-#include "ui.hpp"
+namespace pqe { class App; }
+
+// #include "ui.hpp"
 
 namespace pqe {
 
 class App {
 public:
-  GuiWrapper _gui;
+  // GuiWrapper _gui;
 
   App();
   ~App();
