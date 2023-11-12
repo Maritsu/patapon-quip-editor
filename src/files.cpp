@@ -1,9 +1,12 @@
-#include <QFileDialog>
-#include <QSaveFile>
+#include <cmath>
+#include <cstring>
 #include <stdexcept>
 
+#include <QFileDialog>
+#include <QSaveFile>
+
 #include "files.hpp"
-#include "libP3Hash.cpp"
+#include "libP3Hash.hpp"
 
 namespace pqe {
 
@@ -58,17 +61,23 @@ bool saveData(QFile *file, const QByteArray &newData, bool backup,
 }
 
 QByteArray decrypt(const QByteArray &data) {
-  std::vector<uint32_t> dataVec(data.constBegin(), data.constEnd());
-  dataVec = decryptBlock(dataVec);
-  return QByteArray(reinterpret_cast<const char *>(dataVec.data()),
-                    dataVec.size());
+  assert(data.size() % 4 == 0);
+  std::vector<uint32_t> dataVec(std::ceil(data.size() / sizeof(uint32_t)), 0);
+  std::memcpy(dataVec.data(), data.data(), data.size());
+  std::vector<uint32_t> dataVec2 = libP3Hash::decryptFileData(dataVec);
+  QByteArray dataQba2(data.size(), 0);
+  std::memcpy(dataQba2.data(), dataVec2.data(), data.size());
+  return dataQba2;
 }
 
 QByteArray encrypt(const QByteArray &data) {
-  std::vector<uint32_t> dataVec(data.constBegin(), data.constEnd());
-  dataVec = encryptBlock(dataVec);
-  return QByteArray(reinterpret_cast<const char *>(dataVec.data()),
-                    dataVec.size());
+  assert(data.size() % 4 == 0);
+  std::vector<uint32_t> dataVec(std::ceil(data.size() / sizeof(uint32_t)), 0);
+  std::memcpy(dataVec.data(), data.data(), data.size());
+  std::vector<uint32_t> dataVec2 = libP3Hash::encryptFileData(dataVec);
+  QByteArray dataQba2(data.size(), 0);
+  std::memcpy(dataQba2.data(), dataVec2.data(), data.size());
+  return dataQba2;
 }
 
 } // namespace pqe
