@@ -6,7 +6,7 @@
 #include <QSaveFile>
 
 #include "files.hpp"
-#include "libP3Hash.hpp"
+#include "libP3Hash.cpp"
 
 namespace pqe {
 
